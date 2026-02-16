@@ -1,0 +1,9 @@
+body
+{
+    font-family: 'Inter', 'light' ;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    letter-spacing: -0.3;
+    color: #000000
+}

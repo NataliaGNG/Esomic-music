@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+   <nav>
+        <ul>
+            <li><a href="#releases">Releases</a></li>
+            <li><a href="#Über uns">Über uns</a></li>
+            <li><a href="#Kontakt">Kontakt</a></li>
+        </ul>
+   </nav>
+
+<img src="image.jpg" alt="Sample Image">
+
+<p>Jetzt reinhören!</p>
+
+<section id="releases">
+    <h2>Releases</h2>
+    <div class="release-container">
+        <div class="Spotify-container">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4qjH3LNw7CVfgbgfhOEzyu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                
+        </div>
+        <div class="Spotify-container">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4qjH3LNw7CVfgbgfhOEzyu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+        </div>
+    </div>
+    <div>
+        <p>Streame auf Spotify, Soundcloud und Youtube.</p>
+        <div class="social-links">
+            <a href="https://open.spotify.com/intl-de/artist/5i5NYqMFfi07iXSuWWv4LO?si=lDLlrKBvSZuQ0u3t1T8Hbg" target="_blank"><img src="spotify.png" alt="Spotify"></a>
+            <a href="https://soundcloud.com/esomic" target="_blank"><img src="soundcloud.png" alt="Soundcloud"></a>
+            <a href="https://www.youtube.com/@esomic" target="_blank"><img src="youtube.png" alt="Youtube"></a>
+        </div>
+    </div>
+</section>
+
+<section id="Über uns">
+    <h2>Über uns</h2>
+    <div class="überuns-spalten">
+    <h3>Alternative Rock seit 2009</h3>
+    <p>Esomic entstand aus der Idee, Rockmusik neu zu denken – emotional, reduziert und ehrlich. Gegründet in Stuttgart, vereint die Band Einflüsse aus Alternative, Indie und klassischem Rock. Statt großen Gesten stehen Atmosphäre, Texturen und persönliche Geschichten im Mittelpunkt. 
+        <br>Esomic ist ein Projekt zwischen Studioexperimenten und Live-Energie.
+        <br>roh, introspektiv und kompromisslos.
+    </p>
+    </div>
+
+    <div class="foto-galerie">
+        <img src="foto1.jpg" alt="Foto 1">
+        <img src="foto2.jpg" alt="Foto 2">
+        <img src="foto3.jpg" alt="Foto 3">
+    </div>
+</section>  
+
+<section id="Kontakt">
+    <div class="kontakt-container">
+        <div class="kontakt-spalten-formular">
+            <h2>Kontakt</h2>
+            <h1>Sende uns eine Nachricht!</h1>
+            <div>
+                <form action="submit_form.php" method="post">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="message">Nachricht:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br>
+                    <input type="submit" value="Senden">
+                </form>
+            </div>
+        </div>
+    
+</section>
+
+</body>
+    <footer>
+        <div>
+            <picture>
+                <source srcset="potato.webp" type="image/webp">
+                <img src="Potato.png" alt="Potatao">
+            </picture>
+        </div>
+
+    <p>&copy; 2026 Esomic - Impressum</p>
+    </footer>
+</html>
