@@ -3,22 +3,51 @@
     <title>My Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
    <nav>
-        <ul>
-            <li><a href="#releases">Releases</a></li>
-            <li><a href="#Über uns">Über uns</a></li>
-            <li><a href="#Kontakt">Kontakt</a></li>
-        </ul>
+        <div class="background-glass">
+            <ul>
+                <li><a href="#releases">Releases</a></li>
+                <li><a href="#Über uns">Über uns</a></li>
+                <li><a href="#Kontakt">Kontakt</a></li>
+            </ul>
+        </div>
    </nav>
 
-<img src="image.jpg" alt="Sample Image">
+<div class="container">
 
-<p>Jetzt reinhören!</p>
+<section id="hero">
+  <div class="cover-container">
+    <div class="bars-left">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <div class="cover-center">
+    <img id="coverpic" src="images/cover.png" alt="Cover">
+    <p class="hero-text">Jetzt reinhören!</p>
+  </div>
+    <div class="bars-right">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+
+  <div class="player">
+    <div>
+
+    </div>
+
+  </div>
+  
+</section>
+
+/--bis hier--/
 
 <section id="releases">
     <h2>Releases</h2>
@@ -30,12 +59,12 @@
             <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4qjH3LNw7CVfgbgfhOEzyu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
         </div>
     </div>
-    <div>
-        <p>Streame auf Spotify, Soundcloud und Youtube.</p>
+    <div class="centered-links">
+        <p>Streame auf </p>
         <div class="social-links">
             <a href="https://open.spotify.com/intl-de/artist/5i5NYqMFfi07iXSuWWv4LO?si=lDLlrKBvSZuQ0u3t1T8Hbg" target="_blank"><img src="spotify.png" alt="Spotify"></a>
-            <a href="https://soundcloud.com/esomic" target="_blank"><img src="soundcloud.png" alt="Soundcloud"></a>
-            <a href="https://www.youtube.com/@esomic" target="_blank"><img src="youtube.png" alt="Youtube"></a>
+            <a href="https://soundcloud.com/esomic" target="_blank"><img src="images/soundcloud.png" alt="Soundcloud"></a>
+            <a href="https://www.youtube.com/@esomic" target="_blank"><img class="Icon" src="images/youtube.png" alt="Youtube"></a>
         </div>
     </div>
 </section>
@@ -43,11 +72,15 @@
 <section id="Über uns">
     <h2>Über uns</h2>
     <div class="überuns-spalten">
-    <h3>Alternative Rock seit 2009</h3>
-    <p>Esomic entstand aus der Idee, Rockmusik neu zu denken – emotional, reduziert und ehrlich. Gegründet in Stuttgart, vereint die Band Einflüsse aus Alternative, Indie und klassischem Rock. Statt großen Gesten stehen Atmosphäre, Texturen und persönliche Geschichten im Mittelpunkt. 
-        <br>Esomic ist ein Projekt zwischen Studioexperimenten und Live-Energie.
-        <br>roh, introspektiv und kompromisslos.
-    </p>
+     <h3>Alternative Rock seit 2009</h3>
+        <p>Esomic entstand aus der Idee, Rockmusik neu zu denken – emotional, reduziert und ehrlich. Gegründet in Stuttgart, vereint die Band Einflüsse aus Alternative, Indie und klassischem Rock. Statt großen Gesten stehen Atmosphäre, Texturen und persönliche Geschichten im Mittelpunkt. 
+            <br>Esomic ist ein Projekt zwischen Studioexperimenten und Live-Energie.
+            <br>roh, introspektiv und kompromisslos.
+        </p>
+        <div class="bandfoto">
+            <img src="bandfoto.jpg" alt="Bandfoto">
+        </div>
+
     </div>
 
     <div class="foto-galerie">
@@ -77,7 +110,9 @@
     
 </section>
 
-</body>
+</div>
+
+
     <footer>
         <div>
             <picture>
@@ -88,4 +123,5 @@
 
     <p>&copy; 2026 Esomic - Impressum</p>
     </footer>
+</body>
 </html>
