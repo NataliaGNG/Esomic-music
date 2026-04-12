@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>Esomic Music</title>
+    <title>My Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
@@ -10,12 +10,17 @@
 </head>
 <body>
    <nav>
-        <div class="background-glass">
-            <ul>
+        <div class="background-glass" id="nav-glass">
+            <ul id="nav-links">
                 <li><a href="#releases">Releases</a></li>
                 <li><a href="#Über uns">Über uns</a></li>
                 <li><a href="#Kontakt">Kontakt</a></li>
             </ul>
+            <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
    </nav>
 
@@ -67,13 +72,13 @@
   </div>
 
   </div>
-  
-</section>
 
-<div class="scroll-hint" id="scroll-hint">
-  <span>Scrolle</span>
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
-</div>
+  <div class="scroll-hint" id="scroll-hint">
+    <span>Scrolle</span>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+  </div>
+
+</section>
 
 <section id="releases">
     <img class="deco-splash deco-splash--left" src="1770843623602 2.png" aria-hidden="true">
@@ -84,9 +89,6 @@
             <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4qjH3LNw7CVfgbgfhOEzyu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                
         </div>
         <div class="Spotify-container">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4qjH3LNw7CVfgbgfhOEzyu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
-        </div>
-		<div class="Spotify-container">
             <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4qjH3LNw7CVfgbgfhOEzyu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
         </div>
 		<div class="Spotify-container">
@@ -106,60 +108,126 @@
 </section>
 
 <section id="Über uns">
-    <h2>Über uns</h2>
-    <div class="überuns-spalten">
-     <h3>Alternative Rock seit 2009</h3>
-        <p>Esomic entstand aus der Idee, Rockmusik neu zu denken – emotional, reduziert und ehrlich. Gegründet in Stuttgart, vereint die Band Einflüsse aus Alternative, Indie und klassischem Rock. Statt großen Gesten stehen Atmosphäre, Texturen und persönliche Geschichten im Mittelpunkt. 
-            <br>Esomic ist ein Projekt zwischen Studioexperimenten und Live-Energie.
-            <br>roh, introspektiv und kompromisslos.
-        </p>
-        <div class="bandfoto">
-            <img src="bandfoto.jpg" alt="Bandfoto">
-        </div>
 
+  <p class="section-label">Über uns</p>
+
+  <div class="ueberuns-grid">
+
+    <div class="ueberuns-text">
+      <h2 class="ueberuns-headline">Alternative Rock<br>seit 2009</h2>
+
+      <blockquote class="ueberuns-quote">
+        "roh, introspektiv und kompromisslos."
+      </blockquote>
+
+      <p>Esomic entstand aus der Idee, Rockmusik neu zu denken — emotional, reduziert und ehrlich. Gegründet in Stuttgart, vereint die Band Einflüsse aus Alternative, Indie und klassischem Rock.</p>
+
+      <p>Statt großen Gesten stehen Atmosphäre, Texturen und persönliche Geschichten im Mittelpunkt. Ein Projekt zwischen Studioexperimenten und Live-Energie.</p>
     </div>
 
-    <div class="foto-galerie">
-        <img src="foto1.jpg" alt="Foto 1">
-        <img src="foto2.jpg" alt="Foto 2">
-        <img src="foto3.jpg" alt="Foto 3">
+    <div class="ueberuns-foto-wrap">
+      <img src="images.jpeg" alt="Bandfoto" class="ueberuns-foto">
+      <div class="ueberuns-badge">Stuttgart · seit 2009</div>
     </div>
-</section>  
+
+  </div>
+
+  <div class="galerie-wrap">
+    <p class="section-label">Galerie</p>
+    <div class="foto-galerie-grid">
+
+  <div class="galerie-item">
+    <img src="images.jpeg" alt="Foto 1">
+    <div class="galerie-overlay">
+      <span class="overlay-name">Max Mustermann</span>
+      <span class="overlay-rolle">Gitarre</span>
+      <span class="overlay-bio">Gründungsmitglied seit 2009. Schreibt die meisten Riffs und lebt für den Live-Sound.</span>
+    </div>
+  </div>
+
+  <div class="galerie-item">
+    <img src="images2.jpeg" alt="Foto 2">
+    <div class="galerie-overlay">
+      <span class="overlay-name">Anna Beispiel</span>
+      <span class="overlay-rolle">Bass</span>
+      <span class="overlay-bio">Hält den Groove zusammen. Studierte klassische Musik, landete beim Rock.</span>
+    </div>
+  </div>
+
+  <div class="galerie-item">
+    <img src="images2.jpeg" alt="Foto 3">
+    <div class="galerie-overlay">
+      <span class="overlay-name">Tom Klang</span>
+      <span class="overlay-rolle">Schlagzeug</span>
+      <span class="overlay-bio">Treibt die Band an — on stage und off. Percussion seit dem 8. Lebensjahr.</span>
+    </div>
+  </div>
+  <div class="galerie-item">
+    <img src="images2.jpeg" alt="Foto 3">
+    <div class="galerie-overlay">
+      <span class="overlay-name">Tom Klang</span>
+      <span class="overlay-rolle">Schlagzeug</span>
+      <span class="overlay-bio">Treibt die Band an — on stage und off. Percussion seit dem 8. Lebensjahr.</span>
+    </div>
+  </div>
+
+</div>
+  </div>
+
+</section> 
 
 <section id="Kontakt">
-    <div class="kontakt-container">
-        <div class="kontakt-spalten-formular">
-            <h2>Kontakt</h2>
-            <h1>Sende uns eine Nachricht!</h1>
-            <div>
-                <form action="submit_form.php" method="post">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br>
-                    <label for="message">Nachricht:</label><br>
-                    <textarea id="message" name="message" rows="4" required></textarea><br>
-                    <input type="submit" value="Senden">
-                </form>
-            </div>
+  <div class="kontakt-container">
+
+    <div class="kontakt-grid">
+
+      <div class="kontakt-links">
+        <p class="section-label">Kontakt</p>
+        <h2 class="kontakt-headline">Sende uns<br>eine Nachricht.</h2>
+      </div>
+
+      <form action="submit_form.php" method="post" class="kontakt-form">
+
+        <div class="kontakt-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Dein Name" required>
         </div>
-	</div>
-    
+
+        <div class="kontakt-field">
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" placeholder="deine@mail.de" required>
+        </div>
+
+        <div class="kontakt-field">
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="message" rows="5" placeholder="Deine Nachricht..." required></textarea>
+        </div>
+
+        <input type="submit" value="Absenden" class="kontakt-submit">
+
+      </form>
+    </div>
+  </div>
 </section>
 
 </div>
 
 
     <footer>
-        <div>
-            <picture>
-                <source srcset="potato.webp" type="image/webp">
-                <img src="Potato.png" alt="Potatao">
-            </picture>
-        </div>
+  <div class="footer-left">
+    <svg class="potato" id="potato" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20">
+      <ellipse cx="50" cy="52" rx="36" ry="28" fill="#c8a96e"/>
+      <ellipse cx="38" cy="40" rx="22" ry="16" fill="#d4b87a"/>
+      <circle cx="40" cy="48" r="4" fill="#a0784a"/>
+      <circle cx="58" cy="56" r="3" fill="#a0784a"/>
+      <circle cx="48" cy="62" r="2.5" fill="#a0784a"/>
+      <circle cx="34" cy="58" r="2" fill="#a0784a"/>
+    </svg>
+    <span class="potato-label" id="potato-label">made by nagoni</span>
+  </div>
 
-    <p>&copy; 2026 Esomic - Impressum</p>
-    </footer>
+  <p>&copy; 2026 Esomic – Impressum</p>
+</footer>
 
 
     
@@ -214,14 +282,51 @@
     audio.currentTime = progress.value;
   });
 
-  // scroll hint ausblenden wenn Hero verlassen
+  // scroll hint: bei Scroll sofort ausblenden, bei Rückkehr nach oben wieder einblenden
   const scrollHint = document.getElementById('scroll-hint');
-  const heroSection = document.getElementById('hero');
   window.addEventListener('scroll', () => {
-    const heroBottom = heroSection.getBoundingClientRect().bottom;
-    scrollHint.classList.toggle('hidden', heroBottom < window.innerHeight * 0.5);
+    scrollHint.classList.toggle('hidden', window.scrollY > 10);
   }, { passive: true });
+
+  // Burger-Menü
+  const burger = document.getElementById('burger');
+  const navGlass = document.getElementById('nav-glass');
+
+  burger.addEventListener('click', () => {
+    const isOpen = navGlass.classList.toggle('open');
+    burger.setAttribute('aria-expanded', isOpen);
+  });
+
+  document.querySelectorAll('#nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navGlass.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+
+
+  const potato = document.getElementById('potato');
+const potatoLabel = document.getElementById('potato-label');
+
+potato.addEventListener('mouseenter', () => {
+  potatoLabel.classList.add('visible');
+});
+potato.addEventListener('mouseleave', () => {
+  if (!potatoLabel.dataset.clicked) {
+    potatoLabel.classList.remove('visible');
+  }
+});
+potato.addEventListener('click', () => {
+  potatoLabel.classList.add('visible');
+  potatoLabel.dataset.clicked = 'true';
+  setTimeout(() => {
+    potatoLabel.classList.remove('visible');
+    delete potatoLabel.dataset.clicked;
+  }, 2500);
+});
 </script>
+
 </body>
 
 </html>
