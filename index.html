@@ -10,19 +10,19 @@
 </head>
 <body>
    <nav>
-        <div class="background-glass" id="nav-glass">
-            <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul id="nav-links">
-                <li><a href="#releases">Releases</a></li>
-                <li><a href="#Über uns">Über uns</a></li>
-                <li><a href="#Kontakt">Kontakt</a></li>
-            </ul>
-        </div>
-   </nav>
+  <div class="background-glass" id="nav-glass">
+    <ul id="nav-links">
+      <li><a href="#releases">Releases</a></li>
+      <li><a href="#Über uns">Über uns</a></li>
+      <li><a href="#Kontakt">Kontakt</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
 
 <div class="container">
 
@@ -33,10 +33,13 @@
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
+    
     <div class="cover-center">
-    <img id="coverpic" src="cover.png" alt="Cover">
-    <p class="hero-text">Jetzt reinhören!</p>
+     <img id="coverpic" src="cover.png" alt="Cover">
+     <p class="hero-text">Jetzt reinhören!</p>
+
   </div>
+
     <div class="bars-right">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -44,18 +47,21 @@
     </div>
   </div>
 
-  <div class="player-container">
-    <div class="player">
-      <audio id="audio" src=""></audio>
+ <div class="player-container">
+  <div class="player">
+    <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
 
-      <span class="player-title" id="player-title">Candyland</span>
-
-      <div class="player-main-row">
-        <button class="player-btn player-btn--play" id="play-btn" aria-label="Play">
+    <div class="player-inner">
+      <div class="player-left">
+        <button class="player-btn--play" id="play-btn" aria-label="Play">
           <svg id="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           <svg id="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
         </button>
+      </div>
 
+      <div class="player-center">
+        <span class="player-title">Candyland</span>
+        <span class="player-artist">Esomic</span>
         <div class="player-progress-block">
           <input type="range" id="progress" class="player-progress" value="0" min="0" step="0.1">
           <div class="player-times">
@@ -63,13 +69,11 @@
             <span id="duration">0:00</span>
           </div>
         </div>
-
-        <svg class="player-vol-icon" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
-        </svg>
       </div>
     </div>
+
   </div>
+</div>
 
   </div>
 
@@ -80,32 +84,6 @@
 
 </section>
 
-<section id="releases">
-    <img class="deco-splash deco-splash--left" src="1770843623602 2.png" aria-hidden="true">
-    <img class="deco-splash deco-splash--right" src="1770843623602 2.png" aria-hidden="true">
-    <h2>Releases</h2>
-    <div class="release-container">
-        <div class="Spotify-container">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4qjH3LNw7CVfgbgfhOEzyu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                
-        </div>
-        <div class="Spotify-container">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4qjH3LNw7CVfgbgfhOEzyu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
-        </div>
-		<div class="Spotify-container">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4qjH3LNw7CVfgbgfhOEzyu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
-        </div>
-    </div>
-	
-	
-    <div class="centered-links">
-        <p>Streame auf </p>
-        <div class="social-links">
-            <a href="https://open.spotify.com/intl-de/artist/5i5NYqMFfi07iXSuWWv4LO?si=lDLlrKBvSZuQ0u3t1T8Hbg" target="_blank"><img class="icon" src="youtube.png" alt="Spotify"></a>
-            <a href="https://soundcloud.com/esomic" target="_blank"><img class="icon" src="youtube.png" alt="Soundcloud"></a>
-            <a href="https://www.youtube.com/@esomic" target="_blank"><img class="icon" src="youtube.png" alt="Youtube"></a>
-        </div>
-    </div>
-</section>
 
 <section id="Über uns">
 
@@ -136,45 +114,69 @@
     <p class="section-label">Galerie</p>
     <div class="foto-galerie-grid">
 
-  <div class="galerie-item">
-    <img src="images.jpeg" alt="Foto 1">
-    <div class="galerie-overlay">
-      <span class="overlay-name">Max Mustermann</span>
-      <span class="overlay-rolle">Gitarre</span>
-      <span class="overlay-bio">Gründungsmitglied seit 2009. Schreibt die meisten Riffs und lebt für den Live-Sound.</span>
+      <div class="galerie-item">
+        <img src="images.jpeg" alt="Foto 1">
+        <div class="galerie-overlay">
+          <span class="overlay-name">Max Mustermann</span>
+          <span class="overlay-rolle">Gitarre</span>
+          <span class="overlay-bio">Gründungsmitglied seit 2009. Schreibt die meisten Riffs und lebt für den Live-Sound.</span>
+        </div>
+      </div>
+
+      <div class="galerie-item">
+        <img src="images2.jpeg" alt="Foto 2">
+        <div class="galerie-overlay">
+          <span class="overlay-name">Anna Beispiel</span>
+          <span class="overlay-rolle">Bass</span>
+          <span class="overlay-bio">Hält den Groove zusammen. Studierte klassische Musik, landete beim Rock.</span>
+        </div>
+      </div>
+
+      <div class="galerie-item">
+        <img src="images2.jpeg" alt="Foto 3">
+        <div class="galerie-overlay">
+          <span class="overlay-name">Tom Klang</span>
+          <span class="overlay-rolle">Schlagzeug</span>
+          <span class="overlay-bio">Treibt die Band an — on stage und off. Percussion seit dem 8. Lebensjahr.</span>
+        </div>
+      </div>
+      <div class="galerie-item">
+        <img src="images2.jpeg" alt="Foto 3">
+        <div class="galerie-overlay">
+          <span class="overlay-name">Tom Klang</span>
+          <span class="overlay-rolle">Schlagzeug</span>
+          <span class="overlay-bio">Treibt die Band an — on stage und off. Percussion seit dem 8. Lebensjahr.</span>
+        </div>
+      </div>
+
     </div>
   </div>
-
-  <div class="galerie-item">
-    <img src="images2.jpeg" alt="Foto 2">
-    <div class="galerie-overlay">
-      <span class="overlay-name">Anna Beispiel</span>
-      <span class="overlay-rolle">Bass</span>
-      <span class="overlay-bio">Hält den Groove zusammen. Studierte klassische Musik, landete beim Rock.</span>
-    </div>
-  </div>
-
-  <div class="galerie-item">
-    <img src="images2.jpeg" alt="Foto 3">
-    <div class="galerie-overlay">
-      <span class="overlay-name">Tom Klang</span>
-      <span class="overlay-rolle">Schlagzeug</span>
-      <span class="overlay-bio">Treibt die Band an — on stage und off. Percussion seit dem 8. Lebensjahr.</span>
-    </div>
-  </div>
-  <div class="galerie-item">
-    <img src="images2.jpeg" alt="Foto 3">
-    <div class="galerie-overlay">
-      <span class="overlay-name">Tom Klang</span>
-      <span class="overlay-rolle">Schlagzeug</span>
-      <span class="overlay-bio">Treibt die Band an — on stage und off. Percussion seit dem 8. Lebensjahr.</span>
-    </div>
-  </div>
-
-</div>
-  </div>
-
 </section> 
+
+<section id="releases">
+    <img class="deco-splash deco-splash--left" src="1770843623602 2.png" aria-hidden="true">
+    <img class="deco-splash deco-splash--right" src="1770843623602 2.png" aria-hidden="true">
+    <h2>Releases</h2>
+    <div class="release-container">
+        <div class="Spotify-container">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4qjH3LNw7CVfgbgfhOEzyu?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                
+        </div>
+        <div class="Spotify-container">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2UnF7WVdOCogPAj2gq12UC?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        </div>
+		<div class="Spotify-container">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7pKn3t6IWmIxyHe8ZkzXqu?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        </div>
+    </div>
+	
+	
+    <div class="centered-links">
+        <p>Streame auf </p>
+        <div class="social-links">
+            <a href="https://open.spotify.com/intl-de/artist/5i5NYqMFfi07iXSuWWv4LO?si=lDLlrKBvSZuQ0u3t1T8Hbg" target="_blank"><img class="icon" src="youtube.png" alt="Spotify"></a>
+            <a href="https://soundcloud.com/esomic" target="_blank"><img class="icon" src="youtube.png" alt="Soundcloud"></a>
+            <a href="https://www.youtube.com/channel/UCu-p8upBGnqAOTJ3auKA-0g" target="_blank"><img class="icon" src="youtube.png" alt="Youtube"></a>
+        </div>
+    </div>
+</section>
 
 <section id="Kontakt">
   <div class="kontakt-container">
@@ -200,7 +202,7 @@
 
         <div class="kontakt-field">
           <label for="message">Nachricht</label>
-          <textarea id="message" name="message" rows="5" placeholder="Deine Nachricht..." required></textarea>
+          <textarea id="message" name="message" rows="5" placeholder="Hi Esomic ..." required></textarea>
         </div>
 
         <input type="submit" value="Absenden" class="kontakt-submit">
@@ -210,10 +212,9 @@
   </div>
 </section>
 
-</div>
 
 
-    <footer>
+<footer>
   <div class="footer-left">
     <svg class="potato" id="potato" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20">
       <ellipse cx="50" cy="52" rx="36" ry="28" fill="#c8a96e"/>
@@ -223,7 +224,7 @@
       <circle cx="48" cy="62" r="2.5" fill="#a0784a"/>
       <circle cx="34" cy="58" r="2" fill="#a0784a"/>
     </svg>
-    <span class="potato-label" id="potato-label">made by nagoni</span>
+    <span class="potato-label" id="potato-label">designed by nagoni.studio</span>
   </div>
 
   <p>&copy; 2026 Esomic – Impressum</p>
