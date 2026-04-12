@@ -11,16 +11,16 @@
 <body>
    <nav>
         <div class="background-glass" id="nav-glass">
-            <ul id="nav-links">
-                <li><a href="#releases">Releases</a></li>
-                <li><a href="#Über uns">Über uns</a></li>
-                <li><a href="#Kontakt">Kontakt</a></li>
-            </ul>
             <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <ul id="nav-links">
+                <li><a href="#releases">Releases</a></li>
+                <li><a href="#Über uns">Über uns</a></li>
+                <li><a href="#Kontakt">Kontakt</a></li>
+            </ul>
         </div>
    </nav>
 
@@ -282,8 +282,11 @@
     audio.currentTime = progress.value;
   });
 
-  // scroll hint: bei Scroll sofort ausblenden, bei Rückkehr nach oben wieder einblenden
+  // scroll hint: Text je nach Gerät anpassen
   const scrollHint = document.getElementById('scroll-hint');
+  if (window.matchMedia('(max-width: 600px)').matches) {
+    scrollHint.querySelector('span').textContent = 'Swipe';
+  }
   window.addEventListener('scroll', () => {
     scrollHint.classList.toggle('hidden', window.scrollY > 10);
   }, { passive: true });

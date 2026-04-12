@@ -500,6 +500,27 @@ section{
         padding-top: 80px;
     }
 
+    /* Hero: genau ein Viewport hoch, Inhalt zentriert */
+    #hero {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding-top: 110px;
+        padding-bottom: 80px;
+    }
+
+    .cover-container {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .player-container {
+        width: 100%;
+    }
+
     /* Hero: Bars bei sehr kleinen Screens ausblenden */
     .bars-left,
     .bars-right {
