@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <title>My Website</title>
+    <title>Esomic Musik</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
-   <nav>
-  <div class="background-glass" id="nav-glass">
-    <ul id="nav-links">
-      <li><a href="#releases">Releases</a></li>
-      <li><a href="#Über uns">Über uns</a></li>
-      <li><a href="#Kontakt">Kontakt</a></li>
-    </ul>
-    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</nav>
+  <svg style="position:absolute;width:0;height:0">
+      <filter id="papyrus">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" stitchTiles="stitch"/>
+        <feColorMatrix type="saturate" values="0"/>
+        <feBlend in="SourceGraphic" mode="multiply"/>
+      </filter>
+  </svg>
+
+  <nav>
+    <div class="background-glass" id="nav-glass">
+      <ul id="nav-links">
+        <li><a href="#releases">Releases</a></li>
+        <li><a href="#Über uns">Über uns</a></li>
+        <li><a href="#Kontakt">Kontakt</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-backdrop" id="nav-backdrop"></div>
+  </nav>
 
 <div class="container">
 
@@ -35,7 +46,7 @@
     </div>
     
     <div class="cover-center">
-     <img id="coverpic" src="cover.png" alt="Cover">
+     <img id="coverpic" src="cover.png" alt="Cover" fetchpriority="high">
      <p class="hero-text">Jetzt reinhören!</p>
 
   </div>
@@ -49,7 +60,7 @@
 
  <div class="player-container">
   <div class="player">
-    <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="none"></audio>
 
     <div class="player-inner">
       <div class="player-left">
@@ -104,7 +115,7 @@
     </div>
 
     <div class="ueberuns-foto-wrap">
-      <img src="images.jpeg" alt="Bandfoto" class="ueberuns-foto">
+      <img src="images.jpeg" alt="Bandfoto" class="ueberuns-foto" loading="lazy">
       <div class="ueberuns-badge">Stuttgart · seit 2009</div>
     </div>
 
@@ -115,37 +126,37 @@
     <div class="foto-galerie-grid">
 
       <div class="galerie-item">
-        <img src="images.jpeg" alt="Foto 1">
+        <img src="images2.jpeg" alt="Foto 1" loading="lazy">
         <div class="galerie-overlay">
-          <span class="overlay-name">Max Mustermann</span>
-          <span class="overlay-rolle">Gitarre</span>
+          <span class="overlay-name">Ben</span>
+          <span class="overlay-rolle">Gesang, Gitarre</span>
           <span class="overlay-bio">Gründungsmitglied seit 2009. Schreibt die meisten Riffs und lebt für den Live-Sound.</span>
         </div>
       </div>
 
       <div class="galerie-item">
-        <img src="images2.jpeg" alt="Foto 2">
+        <img src="images2.jpeg" alt="Foto 2" loading="lazy">
         <div class="galerie-overlay">
-          <span class="overlay-name">Anna Beispiel</span>
-          <span class="overlay-rolle">Bass</span>
-          <span class="overlay-bio">Hält den Groove zusammen. Studierte klassische Musik, landete beim Rock.</span>
+          <span class="overlay-name">Cine</span>
+          <span class="overlay-rolle">Instrument eingeben</span>
+          <span class="overlay-bio">Hält den Groove zusammen.</span>
         </div>
       </div>
 
       <div class="galerie-item">
-        <img src="images2.jpeg" alt="Foto 3">
+        <img src="images2.jpeg" alt="Foto 3" loading="lazy">
         <div class="galerie-overlay">
-          <span class="overlay-name">Tom Klang</span>
-          <span class="overlay-rolle">Schlagzeug</span>
-          <span class="overlay-bio">Treibt die Band an — on stage und off. Percussion seit dem 8. Lebensjahr.</span>
+          <span class="overlay-name">Alex</span>
+          <span class="overlay-rolle">Instrument eingeben</span>
+          <span class="overlay-bio">Treibt die Band an.</span>
         </div>
       </div>
       <div class="galerie-item">
-        <img src="images2.jpeg" alt="Foto 3">
+        <img src="images2.jpeg" alt="Foto 3" loading="lazy">
         <div class="galerie-overlay">
-          <span class="overlay-name">Tom Klang</span>
-          <span class="overlay-rolle">Schlagzeug</span>
-          <span class="overlay-bio">Treibt die Band an — on stage und off. Percussion seit dem 8. Lebensjahr.</span>
+          <span class="overlay-name">Tobi</span>
+          <span class="overlay-rolle">Instrument eingeben</span>
+          <span class="overlay-bio">Treibt die Band an.</span>
         </div>
       </div>
 
@@ -154,8 +165,8 @@
 </section> 
 
 <section id="releases">
-    <img class="deco-splash deco-splash--left" src="1770843623602 2.png" aria-hidden="true">
-    <img class="deco-splash deco-splash--right" src="1770843623602 2.png" aria-hidden="true">
+    <img class="deco-splash deco-splash--left" src="1770843623602 2.png" aria-hidden="true" loading="lazy">
+    <img class="deco-splash deco-splash--right" src="1770843623602 2.png" aria-hidden="true" loading="lazy">
     <h2>Releases</h2>
     <div class="release-container">
         <div class="Spotify-container">
@@ -171,9 +182,9 @@
     <div class="centered-links">
         <p>Streame auf </p>
         <div class="social-links">
-            <a href="https://open.spotify.com/intl-de/artist/5i5NYqMFfi07iXSuWWv4LO?si=lDLlrKBvSZuQ0u3t1T8Hbg" target="_blank"><img class="icon" src="youtube.png" alt="Spotify"></a>
-            <a href="https://soundcloud.com/esomic" target="_blank"><img class="icon" src="youtube.png" alt="Soundcloud"></a>
-            <a href="https://www.youtube.com/channel/UCu-p8upBGnqAOTJ3auKA-0g" target="_blank"><img class="icon" src="youtube.png" alt="Youtube"></a>
+            <a href="https://open.spotify.com/intl-de/artist/5i5NYqMFfi07iXSuWWv4LO?si=lDLlrKBvSZuQ0u3t1T8Hbg" target="_blank"><img class="icon" src="youtube.png" alt="Spotify" loading="lazy"></a>
+            <a href="https://soundcloud.com/esomic" target="_blank"><img class="icon" src="youtube.png" alt="Soundcloud" loading="lazy"></a>
+            <a href="https://www.youtube.com/channel/UCu-p8upBGnqAOTJ3auKA-0g" target="_blank"><img class="icon" src="youtube.png" alt="Youtube" loading="lazy"></a>
         </div>
     </div>
 </section>
@@ -295,17 +306,24 @@
   // Burger-Menü
   const burger = document.getElementById('burger');
   const navGlass = document.getElementById('nav-glass');
+  const navBackdrop = document.getElementById('nav-backdrop');
+
+  function closeMenu() {
+    navGlass.classList.remove('open');
+    navBackdrop.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  }
 
   burger.addEventListener('click', () => {
     const isOpen = navGlass.classList.toggle('open');
+    navBackdrop.classList.toggle('open', isOpen);
     burger.setAttribute('aria-expanded', isOpen);
   });
 
+  navBackdrop.addEventListener('click', closeMenu);
+
   document.querySelectorAll('#nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navGlass.classList.remove('open');
-      burger.setAttribute('aria-expanded', 'false');
-    });
+    link.addEventListener('click', closeMenu);
   });
 
 
