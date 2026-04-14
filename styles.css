@@ -2,7 +2,16 @@
 html {
   scroll-behavior: smooth;
 }
-
+#hero {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
@@ -14,7 +23,7 @@ body {
   margin: 0;
   letter-spacing: -0.3px;
   color: #000000;
-  background: #cad2d5;
+  background: #c4c9c7;
   overflow-x: clip;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior-y: none;
@@ -36,9 +45,10 @@ nav {
 }
 
 .background-glass {
-  background: #ffffff;
+  background: transparent;
   padding: 10px 28px;
   border-radius: 100px;
+  transition: background 0.4s ease;
 }
 
 nav ul {
@@ -52,7 +62,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.75);
   font-size: 0.88rem;
   letter-spacing: 0.04em;
   transition: color 0.2s ease;
@@ -140,7 +150,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #888;
+  color: #555;
 }
 
 /* ── Player ── */
@@ -149,13 +159,14 @@ section {
   justify-content: center;
   padding-top: 16px;
   padding-bottom: 10px;
+  width: 100%;
 }
 
 .player {
   width: 100%;
   max-width: 360px;
   background: #ffffff;
-  border-radius: 16px;
+  border-radius: 20px;
   box-shadow: 0 2px 20px rgba(0,0,0,0.08);
   padding: 16px 20px;
   box-sizing: border-box;
@@ -226,7 +237,7 @@ section {
   width: 100%;
   height: 3px;
   border-radius: 3px;
-  background: #e8e8e8;
+  background: linear-gradient(to right, #1a1a1a 0%, #e8e8e8 0%);
   outline: none;
   cursor: pointer;
 }
@@ -285,26 +296,28 @@ section {
 #releases {
   position: relative;
   overflow: visible;
+  padding-left: calc(clamp(1rem, 4vw, 3rem));
+  padding-right: calc(clamp(1rem, 4vw, 3rem));
 }
 
 .deco-splash {
   position: absolute;
-  width: clamp(60px, 9vw, 140px);
+ width: clamp(100px, 13vw, 200px);
   top: 50%;
   pointer-events: none;
   mix-blend-mode: multiply;
-  opacity: 0.55;
+  opacity: 1;
   z-index: 0;
   user-select: none;
 }
 
 .deco-splash--right {
-  right: calc(-1 * (clamp(60px, 9vw, 140px) + 12px));
+  right: calc(-1 * (clamp(90px, 13vw, 200px) + 12px));
   transform: translateY(-50%);
 }
 
 .deco-splash--left {
-  left: calc(-1 * (clamp(60px, 9vw, 140px) + 12px));
+  left: calc(-1 * (clamp(90px, 13vw, 200px) + 12px));
   transform: translateY(-50%) scaleX(-1);
 }
 
@@ -328,10 +341,11 @@ section {
 }
 
 .icon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   margin: 10px;
 }
+
 
 /* ── Kontakt ── */
 .kontakt-container {
@@ -381,7 +395,7 @@ section {
   box-sizing: border-box;
   padding: 12px 14px;
   border: 1px solid #e0e0e0;
-  border-radius: 10px;
+  border-radius: 12px;
   font-family: inherit;
   font-size: 0.95rem;
   background: #f5f5f5;
@@ -403,7 +417,7 @@ section {
   background: #1a1a1a;
   color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 14px 28px;
   font-family: inherit;
   font-size: 0.9rem;
@@ -468,7 +482,7 @@ section {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 20px;
   display: block;
 }
 
@@ -797,7 +811,7 @@ footer > p {
   }
 
   .player {
-    border-radius: 14px;
+    border-radius: 20px;
   }
 
   /* ── Releases ── */
@@ -826,7 +840,7 @@ footer > p {
   /* ── Kontakt ── */
   .kontakt-container {
     padding: 24px 20px;
-    border-radius: 16px;
+    border-radius: 20px;
   }
 
   .kontakt-grid {
@@ -864,44 +878,41 @@ footer > p {
     gap: 10px;
   }
 
-  /* Info unter dem Bild */
-  .galerie-item {
-    overflow: visible;
-    border-radius: 0;
-  }
+  /* ── Galerie Mobile ── */
+.galerie-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
 
-  .galerie-item img {
-    border-radius: 12px;
-  }
+.galerie-item img {
+  border-radius: 12px;
+}
 
-  .galerie-item:hover img {
-    transform: none;
-  }
+.galerie-item:hover img {
+  transform: none;
+}
 
-  .galerie-overlay {
-    position: static;
-    inset: auto;
-    background: transparent;
-    opacity: 1;
-    pointer-events: auto;
-    padding: 8px 2px 4px;
-    transition: none;
-  }
+.galerie-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 16px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
 
-  .overlay-name {
-    font-size: 0.88rem;
-    color: #111;
-  }
+.galerie-item.active .galerie-overlay {
+  opacity: 1;
+}
 
-  .overlay-rolle {
-    font-size: 0.68rem;
-    color: #888;
-    margin-bottom: 0;
-  }
-
-  .overlay-bio {
-    display: none;
-  }
+.overlay-bio {
+  display: block;
+}
 
   /* ── Footer ── */
   footer {
@@ -935,6 +946,10 @@ footer > p {
     top: auto;
     margin-left: 6px;
   }
+  section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 }
 
 @media (max-width: 400px) {
